@@ -1,3 +1,5 @@
+module Main (main) where
+
 import qualified Graphics.X11 as X
 import qualified Graphics.X11.Xlib.Extras as XExtras
 -- import qualified System.Posix as P
