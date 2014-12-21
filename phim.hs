@@ -50,3 +50,9 @@ loop d w gc = do
     case exit of
         True -> return ()
         False -> loop d w gc
+
+getColor :: X.Display -> String -> IO X.Pixel
+getColor d color = do
+        let colorMap = X.defaultColormap d (X.defaultScreen d)
+        (exact, screen) <- X.allocNamedColor d colorMap color
+        return $ X.color_pixel screen
