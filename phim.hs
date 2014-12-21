@@ -20,12 +20,15 @@ main = do
     X.storeName d w "phim"
     X.mapWindow d w
     X.setForeground d gc blackColor
+
     loop d w gc
     -- X.drawLine d w gc 10 60 180 20
     -- X.flush d
     -- M.forever $ P.sleep 10
+
     X.freeGC d gc
     X.closeDisplay d
+
     return ()
 
 loop :: X.Display -> X.Window -> X.GC -> IO ()
