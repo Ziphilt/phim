@@ -55,6 +55,6 @@ loop d w gc = do
 
 getColor :: X.Display -> String -> IO X.Pixel
 getColor d color = do
-        let colorMap = X.defaultColormap d (X.defaultScreen d)
-        (exact, screen) <- X.allocNamedColor d colorMap color
-        return $ X.color_pixel screen
+    let colorMap = X.defaultColormap d (X.defaultScreen d)
+    (exact, screen) <- X.allocNamedColor d colorMap color
+    return $ X.color_pixel screen
