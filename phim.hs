@@ -20,6 +20,8 @@ main = do
     X.storeName d w "phim"
     X.mapWindow d w
     X.setForeground d gc foregroundColor
+    font <- X.loadQueryFont d "-*-terminus-medium-*-*-*-20-*-*-*-*-*-*-*"
+    X.setFont d gc (X.fontFromFontStruct font)
 
     loop d w gc
     -- X.drawLine d w gc 10 60 180 20
