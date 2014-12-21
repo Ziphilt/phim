@@ -10,16 +10,16 @@ import Data.Bits ((.|.))
 main :: IO ()
 main = do
     d <- X.openDisplay ""
-    let blackColor = X.blackPixel d (X.defaultScreen d)
-    let whiteColor = X.whitePixel d (X.defaultScreen d)
+    backgroundColor <- getColor d "#002b36"
+    foregroundColor <- getColor d "#839496"
     w <- X.createSimpleWindow
-        d (X.defaultRootWindow d) 0 0 200 100 0 blackColor whiteColor
+        d (X.defaultRootWindow d) 0 0 200 100 0 backgroundColor backgroundColor
     gc <- X.createGC d w
 
     X.selectInput d w (X.exposureMask .|. X.keyPressMask)
     X.storeName d w "phim"
     X.mapWindow d w
-    X.setForeground d gc blackColor
+    X.setForeground d gc foregroundColor
 
     loop d w gc
     -- X.drawLine d w gc 10 60 180 20
