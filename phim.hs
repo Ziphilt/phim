@@ -13,7 +13,7 @@ main = do
     backgroundColor <- getColor d "#002b36"
     foregroundColor <- getColor d "#839496"
     w <- X.createSimpleWindow
-        d (X.defaultRootWindow d) 0 0 200 100 0 backgroundColor backgroundColor
+        d (X.defaultRootWindow d) 0 0 800 600 0 backgroundColor backgroundColor
     gc <- X.createGC d w
 
     X.selectInput d w (X.exposureMask .|. X.keyPressMask)
