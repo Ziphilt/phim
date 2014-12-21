@@ -14,10 +14,11 @@ main = do
     let whiteColor = X.whitePixel d (X.defaultScreen d)
     w <- X.createSimpleWindow
         d (X.defaultRootWindow d) 0 0 200 100 0 blackColor whiteColor
+    gc <- X.createGC d w
+
     X.selectInput d w (X.exposureMask .|. X.keyPressMask)
     X.storeName d w "phim"
     X.mapWindow d w
-    gc <- X.createGC d w
     X.setForeground d gc blackColor
     loop d w gc
     -- X.drawLine d w gc 10 60 180 20
