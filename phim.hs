@@ -28,6 +28,7 @@ main = do
     -- X.flush d
     -- M.forever $ P.sleep 10
 
+    X.freeFont d font
     X.freeGC d gc
     X.closeDisplay d
 
