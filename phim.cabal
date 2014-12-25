@@ -7,7 +7,7 @@ license:             GPL-2
 license-file:        LICENSE
 author:              Caleb Stepanian
 maintainer:          Caleb Stepanian
--- copyright:
+copyright:           Caleb Stepanian
 category:            Graphics
 build-type:          Simple
 -- extra-source-files:
