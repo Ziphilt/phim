@@ -18,7 +18,7 @@ executable phim
   main-is:             phim.hs
   -- other-modules:
   -- other-extensions:
-  build-depends:       base >=4.7 && <4.8
+  build-depends:       base==4.* && <4.8
   build-depends:       unix
   build-depends:       X11
   -- hs-source-dirs:
